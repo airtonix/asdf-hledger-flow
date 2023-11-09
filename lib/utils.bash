@@ -32,7 +32,7 @@ list_github_tags() {
 # gets commitref for a given tag snips it to 7 characters
 get_commitref_for_tag() {
 	local tag="$1"
-	git ls-remote "$GH_REPO" "refs/tags/${tag}^{}" | cut -f1 | cut -c1-7
+	git ls-remote "$GH_REPO" "refs/tags/v${tag}^{}" | cut -f1 | cut -c1-7
 }
 
 list_all_versions() {
