@@ -46,7 +46,7 @@ download_release() {
 	processor=$(get_machine_processor)
 	os=$(get_machine_os)
 	commitref=$(get_commitref_for_tag "$version")
-
+  
 	url="$GH_REPO/releases/download/v${version}/${TOOL_NAME}_${os}_${processor}_v${version}_${commitref}.tar.gz"
 
 	echo "* Downloading $TOOL_NAME release $version..."
