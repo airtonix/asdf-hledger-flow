@@ -46,8 +46,8 @@ download_release() {
 	processor=$(get_machine_processor)
 	os=$(get_machine_os)
 	commitref=$(get_commitref_for_tag "$version")
- 
-	url="$GH_REPO/releases/download/${version}/${TOOL_NAME}_${os}_${processor}_${version}_${commitref}.tar.gz"
+
+	url="$GH_REPO/releases/download/v${version}/${TOOL_NAME}_${os}_${processor}_v${version}_${commitref}.tar.gz"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
